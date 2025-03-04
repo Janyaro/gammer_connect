@@ -34,15 +34,21 @@ class _SignUpScreenState extends State<SignUpScreen> {
           child: Text("Connects with your friends today" , style: TextUtils.body14,),
         ),
         SizedBox(height: media.height * 0.03,),
-        ReuseTextForm(controller: emailcontroller, hinttext: 'Enter Username', icondata:Icons.person ),
+        ReuseTextForm(controller: emailcontroller, hinttext: 'Name', icondata:Icons.person ),
         SizedBox(height: media.height * 0.015 ,),
         
-        ReuseTextForm(controller: emailcontroller, hinttext: 'Email Address', icondata:Icons.alternate_email ),
+        ReuseTextForm(controller: emailcontroller, hinttext: 'Email', icondata:Icons.alternate_email ),
+                SizedBox(height: media.height * 0.015 ,),
         
+        ReuseTextForm(controller: emailcontroller, hinttext: 'Phone', icondata:Icons.phone ),
+
         SizedBox(height: media.height * 0.015,),
         
         ReuseTextForm(controller: passwordcontroller, hinttext: 'Password', icondata: Icons.visibility),
+                SizedBox(height: media.height * 0.015,),
         
+        ReuseTextForm(controller: passwordcontroller, hinttext: 'Confirm Password', icondata: Icons.visibility),
+
         SizedBox(height: media.height * 0.05,),
        Reusebtn(title: "Sign Up", ontap: (){},),
         SizedBox(height: media.height * 0.03,),
@@ -58,8 +64,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
        ),
        
        SizedBox(height: media.width *.1,),
-       const GoogleSignUpBtn(image: 'assets/facebook.png',title: "LogIn with Google",),
-       SizedBox(height: media.width *.06,),
        const GoogleSignUpBtn(image: 'assets/google.png',title: "LogIn with Google",),
        SizedBox(height: media.width *.03,),
        RichText(

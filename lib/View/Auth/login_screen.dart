@@ -7,7 +7,7 @@ import 'package:untitled/Components/reuse_textform.dart';
 import 'package:untitled/Utils/text_utils.dart';
 import 'package:untitled/View/Auth/forget_password_screen1.dart';
 import 'package:untitled/View/Auth/signup_screen.dart';
-import 'package:untitled/home_screen.dart';
+import 'package:untitled/root_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -54,7 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
         SizedBox(height: media.height * 0.02,),
        Reusebtn(title: "Login", ontap: (){
-        Navigator.push(context, PageTransition(child:const HomeScreen(), type: PageTransitionType.fade));
+        Navigator.push(context, PageTransition(child:const RootScreen(), type: PageTransitionType.fade));
        },),
         SizedBox(height: media.height * 0.03,),
        Row(
@@ -69,8 +69,8 @@ class _LoginScreenState extends State<LoginScreen> {
        ),
        
        SizedBox(height: media.width *.1,),
-       const GoogleSignUpBtn(image: 'assets/facebook.png',title: "LogIn with Google",),
-       SizedBox(height: media.width *.06,),
+      //  const GoogleSignUpBtn(image: 'assets/facebook.png',title: "LogIn with Google",),
+      //  SizedBox(height: media.width *.06,),
        const GoogleSignUpBtn(image: 'assets/google.png',title: "LogIn with Google",),
        SizedBox(height: media.width *.03,),
        RichText(

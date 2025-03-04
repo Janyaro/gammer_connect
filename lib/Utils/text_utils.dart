@@ -15,6 +15,10 @@ class TextUtils {
   static TextStyle heading4 = GoogleFonts.roboto(
     textStyle: TextStyle(fontSize: 18 , fontWeight: FontWeight.w800 , color: AppColor.whiteColor)
   );
+    static TextStyle titleText = GoogleFonts.roboto(
+    textStyle: TextStyle(fontSize: 18 , fontWeight: FontWeight.w600 , color: AppColor.whiteColor)
+  );
+  
   static TextStyle body18 = GoogleFonts.roboto(
     textStyle: TextStyle(fontSize: 18 , fontWeight: FontWeight.normal , color: AppColor.whiteColor)
   );

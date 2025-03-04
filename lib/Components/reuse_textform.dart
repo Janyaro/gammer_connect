@@ -11,9 +11,11 @@ class ReuseTextForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      style: TextStyle(color: AppColor.whiteColor),
       controller: controller,
+      cursorColor: AppColor.whiteColor,
           decoration: InputDecoration(
-            contentPadding:const EdgeInsets.all(10),
+            contentPadding:const EdgeInsets.symmetric(vertical:  10 , horizontal: 20),
             labelText: hinttext,
             labelStyle: TextUtils.body16,
             suffixIcon: Icon(icondata , color: AppColor.whiteColor,),
