@@ -5,7 +5,7 @@ import 'package:untitled/Components/drawer_component.dart';
 import 'package:untitled/Components/reuse_btn.dart';
 import 'package:untitled/Utils/colors.dart';
 import 'package:untitled/Utils/text_utils.dart';
-import 'package:untitled/View/home.dart';
+import 'package:untitled/View/home_screen.dart';
 import 'package:untitled/View/new_screen.dart';
 import 'package:untitled/View/profile.screen.dart';
 import 'package:untitled/View/question_screen.dart';
@@ -44,30 +44,39 @@ class _RootScreenState extends State<RootScreen> {
  final media = MediaQuery.of(context).size;
     return  SafeArea(
       child:  Scaffold(
-        bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: AppColor.themeColor,
-          onTap: _onItemTapped,
-        items:  [
-           BottomNavigationBarItem(icon:  Icon(Icons.home), label: 'Home', backgroundColor: AppColor.themeColor),
-           BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'Search'),
-           BottomNavigationBarItem(icon: Icon(Icons.question_answer), label: 'Questions'),
-           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
-        ],
-        currentIndex: _currentIndex,
-        selectedItemColor: AppColor.whiteColor,
-        unselectedItemColor: Colors.grey,
-        unselectedLabelStyle: const TextStyle(color:Colors.grey),
-        // onTap: _onItemTapped,
-      ),
+        bottomNavigationBar: Container(
+          decoration:const BoxDecoration(
+    border: Border(
+      top: BorderSide(
+        color: Colors.grey,
+         ),
+    ),
+  ),
+          child: BottomNavigationBar(
+            backgroundColor: AppColor.btnColor,
+            onTap: _onItemTapped,
+          items:  [
+             BottomNavigationBarItem(icon: const Icon(Icons.home), label: 'Home', backgroundColor: AppColor.themeColor),
+             BottomNavigationBarItem(icon:const Icon(Icons.chat), label: 'Search' , backgroundColor: AppColor.themeColor),
+             BottomNavigationBarItem(icon:const Icon(Icons.question_answer), label: 'Questions' , backgroundColor: AppColor.themeColor),
+             BottomNavigationBarItem(icon:const Icon(Icons.person), label: 'Profile',backgroundColor: AppColor.themeColor),
+          ],
+          currentIndex: _currentIndex,
+          selectedItemColor: AppColor.whiteColor,
+          unselectedItemColor: Colors.grey,
+          unselectedLabelStyle: const TextStyle(color:Colors.grey),
+          
+                ),
+        ),
           drawerScrimColor: Colors.white,
           
        drawer: Drawer(
   backgroundColor: AppColor.themeColor,
   child: Column(
     children: [
-      SizedBox(
+     const SizedBox(
         width: double.infinity,  // Ensure full width
-        child: const DrawerHeader(
+        child:  DrawerHeader(
           decoration: BoxDecoration(color: Colors.blue),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -113,7 +122,7 @@ class _RootScreenState extends State<RootScreen> {
 
 
         appBar: AppBar(
-          backgroundColor: AppColor.themeColor,
+          backgroundColor: AppColor.btnColor,
         title:  Text(title[_currentIndex] , style: TextUtils.heading2,),
         centerTitle: true,
         ),

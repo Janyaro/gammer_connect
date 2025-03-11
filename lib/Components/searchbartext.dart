@@ -26,6 +26,7 @@ class SearchBarText extends StatelessWidget {
                   ),
                   //default border color
                   border: OutlineInputBorder(
+                    
                     borderRadius: BorderRadius.circular(50),
                     borderSide: BorderSide(
                       color: AppColor.whiteColor

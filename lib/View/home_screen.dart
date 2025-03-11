@@ -21,6 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+               SizedBox(height: media.height * 0.01,),
                SearchBarText(controller: SearchController, hintText: 'Search Game',),
                SizedBox(height: media.height * 0.01,),
                 Row(
@@ -57,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Text(
                     'Global Summit on Climate Change: Historic Agreement Reached',
                     overflow: TextOverflow.ellipsis,
-                    style: TextUtils.heading4,
+                    style: TextUtils.body18,
                     maxLines: 2,
                     softWrap: true,
                   ),
