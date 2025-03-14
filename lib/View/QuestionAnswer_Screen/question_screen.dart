@@ -6,7 +6,7 @@ import 'package:untitled/Components/QuestionContainer.dart';
 import 'package:untitled/Components/searchbartext.dart';
 import 'package:untitled/Utils/colors.dart';
 import 'package:untitled/Utils/text_utils.dart';
-import 'package:untitled/View/Question_Feature_Screen/question_detail.dart';
+import 'package:untitled/View/QuestionAnswer_Screen/question_detail.dart';
 
 class QuestionScreen extends StatefulWidget {
   const QuestionScreen({super.key});

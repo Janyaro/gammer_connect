@@ -6,9 +6,9 @@ import 'package:untitled/Components/reuse_btn.dart';
 import 'package:untitled/Utils/colors.dart';
 import 'package:untitled/Utils/text_utils.dart';
 import 'package:untitled/View/home_screen.dart';
-import 'package:untitled/View/new_screen.dart';
+import 'package:untitled/View/New_Screens/new_screen.dart';
 import 'package:untitled/View/profile.screen.dart';
-import 'package:untitled/View/question_screen.dart';
+import 'package:untitled/View/QuestionAnswer_Screen/question_screen.dart';
 
 class RootScreen extends StatefulWidget {
   const RootScreen({super.key});
@@ -66,10 +66,8 @@ class _RootScreenState extends State<RootScreen> {
           unselectedItemColor: Colors.grey,
           unselectedLabelStyle: const TextStyle(color:Colors.grey),
           
-                ),
-        ),
+                ),),
           drawerScrimColor: Colors.white,
-          
        drawer: Drawer(
   backgroundColor: AppColor.themeColor,
   child: Column(

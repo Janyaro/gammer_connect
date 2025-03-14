@@ -5,7 +5,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:untitled/Components/reuse_btn.dart';
 import 'package:untitled/Utils/colors.dart';
 import 'package:untitled/Utils/text_utils.dart';
-import 'package:untitled/View/ask_question.dart';
+import 'package:untitled/View/QuestionAnswer_Screen/ask_question.dart';
 
 class QuestionDetail extends StatefulWidget {
   const QuestionDetail({super.key});
