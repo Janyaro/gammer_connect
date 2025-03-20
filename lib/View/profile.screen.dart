@@ -24,54 +24,57 @@ class _ProfileScreenState extends State<ProfileScreen> {
       child: Scaffold(
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Stack(
-                alignment: Alignment.center, // Align children in the center
-                children: [
-                  Center(
-                    child: Container(
-                      margin:const EdgeInsets.only(top: 30), // Adjust top margin
-                      width: 200,
-                      height: 200,
-                      decoration:const BoxDecoration(
-                        shape: BoxShape.circle,
-                        image: DecorationImage(
-                          image: AssetImage('assets/deadbydaylight.jpg'),
-                          fit: BoxFit.cover,
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Stack(
+                  alignment: Alignment.center, // Align children in the center
+                  children: [
+                    Center(
+                      child: Container(
+                        margin:const EdgeInsets.only(top: 30), // Adjust top margin
+                        width: 200,
+                        height: 200,
+                        decoration:const BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                            image: AssetImage('assets/deadbydaylight.jpg'),
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                    bottom: 25,
-                    right: 90, // Adjust edit button position
-                    child: Container(
-                      padding:const EdgeInsets.all(6),
-                      decoration: BoxDecoration(
-                        color: AppColor.btnColor,
-                        shape: BoxShape.circle,
+                    Positioned(
+                      bottom: 25,
+                      right: 90, // Adjust edit button position
+                      child: Container(
+                        padding:const EdgeInsets.all(6),
+                        decoration: BoxDecoration(
+                          color: AppColor.btnColor,
+                          shape: BoxShape.circle,
+                        ),
+                        child:const Icon(Icons.edit, color: Colors.white),
                       ),
-                      child:const Icon(Icons.edit, color: Colors.white),
                     ),
-                  ),
-                ],
-              ),
-
-              SizedBox(height: meida.height * 0.02), 
-                Text('Personal Information' , style: TextUtils.heading4,),
-              SizedBox(height: meida.height * 0.02),
-              ProfileText(controller: nameController, labelText: 'Name' , readOnly: false,),
-              SizedBox(height: meida.height * 0.001,),
-              ProfileText(controller: emailController, labelText: 'Email' , readOnly: false,),
-              SizedBox(height: meida.height * 0.001,),
-              ProfileText(controller: phoneController, labelText: 'Phone' , readOnly: false,),
-              SizedBox(height: meida.height * 0.001,),
-              ProfileText(controller: statucController, labelText: 'Status' , readOnly: false,),SizedBox(height: meida.height * 0.04,),
-              Reusebtn(title: 'SAVE', ontap: (){})
-            ],
+                  ],
+                ),
+            
+                SizedBox(height: meida.height * 0.02), 
+                  Text('Personal Information' , style: TextUtils.heading4,),
+                SizedBox(height: meida.height * 0.02),
+                ProfileText(controller: nameController, labelText: 'Name' , readOnly: false,),
+                SizedBox(height: meida.height * 0.001,),
+                ProfileText(controller: emailController, labelText: 'Email' , readOnly: false,),
+                SizedBox(height: meida.height * 0.001,),
+                ProfileText(controller: phoneController, labelText: 'Phone' , readOnly: false,),
+                SizedBox(height: meida.height * 0.001,),
+                ProfileText(controller: statucController, labelText: 'Status' , readOnly: false,),SizedBox(height: meida.height * 0.04,),
+                Reusebtn(title: 'SAVE', ontap: (){}),
+                SizedBox(height: meida.height * 0.07,),
+              ],
+            ),
           ),
         ),
       ),

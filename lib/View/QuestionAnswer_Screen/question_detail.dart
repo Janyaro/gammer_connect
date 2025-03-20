@@ -20,13 +20,22 @@ class _QuestionDetailState extends State<QuestionDetail> {
     final media = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: true,
+        automaticallyImplyLeading: false,
         backgroundColor: AppColor.btnColor,
         title: Text(
           'Question Detail',
           style: TextUtils.heading3,
         ),
         centerTitle: true,
+        leading: IconButton(
+            icon: const Icon(
+              Icons.arrow_back,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),

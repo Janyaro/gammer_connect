@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:untitled/Components/searchbartext.dart';
 import 'package:untitled/Utils/text_utils.dart';
+import 'package:untitled/View/New_Screens/new_screen.dart';
+import 'package:untitled/View/newsdetail_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -37,40 +40,48 @@ class _HomeScreenState extends State<HomeScreen> {
   child: ListView.builder(
     itemCount: 6,
     itemBuilder: (context, index) {
-      return Container(
-        padding:const EdgeInsets.symmetric(vertical: 10),
-        decoration: const BoxDecoration(),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Image.asset(
-              'assets/gtavice.png',
-              width: 100,
-              height: 100,
-              fit: BoxFit.cover,
-            ),
-             const SizedBox(width: 8),
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Global Summit on Climate Change: Historic Agreement Reached',
-                    overflow: TextOverflow.ellipsis,
-                    style: TextUtils.body18,
-                    maxLines: 2,
-                    softWrap: true,
-                  ),
-                  SizedBox(height: media.height * 0.01),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 10),
-                    child: Text('June 9, 2023', style: TextUtils.body14),
-                  )
-                ],
+      return InkWell(
+        onTap: (){
+          Navigator.push(context , PageTransition(child:
+          NewdetailScreen(
+          ), type: PageTransitionType.leftToRight));
+
+        },
+        child: Container(
+          padding:const EdgeInsets.symmetric(vertical: 10),
+          decoration: const BoxDecoration(),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Image.asset(
+                'assets/gtavice.png',
+                width: 100,
+                height: 100,
+                fit: BoxFit.cover,
               ),
-            )
-          ],
+               const SizedBox(width: 8),
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Global Summit on Climate Change: Historic Agreement Reached',
+                      overflow: TextOverflow.ellipsis,
+                      style: TextUtils.body18,
+                      maxLines: 2,
+                      softWrap: true,
+                    ),
+                    SizedBox(height: media.height * 0.01),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 10),
+                      child: Text('June 9, 2023', style: TextUtils.body14),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       );
     },

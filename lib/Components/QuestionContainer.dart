@@ -60,7 +60,7 @@ class QuestionContainer extends StatelessWidget {
                             onTap: (){},
                             child: Container(
                               width: media.width * 0.24,
-                              height: media.height * 0.03,
+                              height: media.height * 0.042,
                               decoration: BoxDecoration(
                               color: AppColor.btnColor,
                               borderRadius: BorderRadius.circular(50)
@@ -72,9 +72,8 @@ class QuestionContainer extends StatelessWidget {
                           InkWell(
                             onTap: (){},
                             child: Container(
-                              
-                              width: media.width * 0.18,
-                              height: media.height * 0.03,
+                              width: media.width * 0.24,
+                              height: media.height * 0.042,
                               decoration: BoxDecoration(
                               color: AppColor.btnColor,
                               borderRadius: BorderRadius.circular(50)

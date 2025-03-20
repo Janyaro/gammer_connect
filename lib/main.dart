@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/Utils/colors.dart';
-import 'package:untitled/View/Auth/login_screen.dart';
-import 'package:untitled/View/home_screen.dart';
+import 'package:untitled/View/newsdetail_screen.dart';
 import 'package:untitled/root_screen.dart';
 
 
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
         
         scaffoldBackgroundColor: AppColor.themeColor, // Set background color here
       ),
-      home:RootScreen(),
+      home:const RootScreen(),
     );
   }
 }

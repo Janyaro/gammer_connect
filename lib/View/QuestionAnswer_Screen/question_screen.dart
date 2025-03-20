@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:read_more_text/read_more_text.dart';
 import 'package:untitled/Components/QuestionContainer.dart';
 import 'package:untitled/Components/searchbartext.dart';
-import 'package:untitled/Utils/colors.dart';
 import 'package:untitled/Utils/text_utils.dart';
 import 'package:untitled/View/QuestionAnswer_Screen/question_detail.dart';
 
