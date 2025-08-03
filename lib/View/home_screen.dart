@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:untitled/Components/searchbartext.dart';
 import 'package:untitled/Utils/text_utils.dart';
-import 'package:untitled/View/New_Screens/new_screen.dart';
 import 'package:untitled/View/newsdetail_screen.dart';
 
 class HomeScreen extends StatefulWidget {

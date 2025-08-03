@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
-import 'package:untitled/Components/drawer_component.dart';
 import 'package:untitled/Utils/colors.dart';
 import 'package:untitled/Utils/text_utils.dart';
 

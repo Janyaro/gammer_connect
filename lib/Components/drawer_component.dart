@@ -11,8 +11,9 @@ class DrawerComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return  ListTile(
               onTap: onTap,
-              leading: Icon(icondata , size: 30,color: Colors.white,),
-              title: Text(iconName , style: TextUtils.body18,),
+              leading: Icon(icondata , size: 30,color: Colors.black,),
+              title: Text(iconName , style:const
+               TextStyle(color: Colors.black),),
             );
   }
 }

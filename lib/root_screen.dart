@@ -4,6 +4,7 @@ import 'package:untitled/Components/drawer_component.dart';
 import 'package:untitled/Components/reuse_btn.dart';
 import 'package:untitled/Utils/colors.dart';
 import 'package:untitled/Utils/text_utils.dart';
+import 'package:untitled/View/Vender_Verification_Screens/verification_step1.dart';
 import 'package:untitled/View/home_screen.dart';
 import 'package:untitled/View/New_Screens/new_screen.dart';
 import 'package:untitled/View/profile.screen.dart';
@@ -17,7 +18,7 @@ class RootScreen extends StatefulWidget {
 }
 
 class _RootScreenState extends State<RootScreen> {
-  final SearchController = TextEditingController();
+  final searchController = TextEditingController();
   FlutterCarouselController buttonCarouselController =
       FlutterCarouselController();
   int _currentIndex = 0;
@@ -41,7 +42,6 @@ class _RootScreenState extends State<RootScreen> {
   ];
   @override
   Widget build(BuildContext context) {
-    final media = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
        appBar: AppBar(
@@ -50,7 +50,7 @@ class _RootScreenState extends State<RootScreen> {
   centerTitle: true,
   leading: Builder(
     builder: (context) => IconButton(
-      icon: Icon(Icons.menu, color: Colors.white, size: 30),
+      icon:const Icon(Icons.menu, color: Colors.white, size: 30),
       onPressed: () {
         Scaffold.of(context).openDrawer(); // Correct context for opening the drawer
       },
@@ -58,41 +58,37 @@ class _RootScreenState extends State<RootScreen> {
   ),
 ),
 
-        drawerScrimColor: Colors.white,
         drawer: Drawer(
           backgroundColor: AppColor.themeColor,
           child: Column(
             children: [
-              SizedBox(
-                width: double.infinity, // Ensure full width
-                child: DrawerHeader(
-                  decoration: BoxDecoration(color: AppColor.themeColor),
-                  child: const Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      CircleAvatar(
-                        radius: 30,
-                        child: Text('1'),
-                      ),
-                      SizedBox(height: 10),
-                      Text(
-                        "Wasim Akram Janyaro",
-                        style: TextStyle(color: Colors.white, fontSize: 18),
-                      ),
-                      Text(
-                        "wasayojanyaro@gmail.com",
-                        style: TextStyle(color: Colors.white70),
-                      ),
-                    ],
-                  ),
+              DrawerHeader(
+                child: const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CircleAvatar(
+                      radius: 30,
+                      child: Text('1'),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      "Wasim Akram Janyaro",
+                      style: TextStyle(color: Colors.black, fontSize: 18),
+                    ),
+                    Text(
+                      "wasayojanyaro@gmail.com",
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ],
                 ),
               ),
-
+              
               Expanded(
                 child: ListView(
                   children: [
                     DrawerComponent(
                         onTap: () {}, icondata: Icons.home, iconName: 'Home'),
+                        
                     DrawerComponent(
                         onTap: () {}, icondata: Icons.home, iconName: 'News'),
                     DrawerComponent(
@@ -114,7 +110,9 @@ class _RootScreenState extends State<RootScreen> {
               /// **Button at the Bottom**
               Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: Reusebtn(title: 'Become a seller', ontap: () {}),
+                child: Reusebtn(title: 'Become a seller', ontap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const VerificationStep1()));
+                }),
               ),
             ],
           ),
@@ -129,6 +127,7 @@ class _RootScreenState extends State<RootScreen> {
             ),
           ),
           child: BottomNavigationBar(
+            
             backgroundColor: AppColor.btnColor,
             onTap: _onItemTapped,
             items: [
@@ -150,7 +149,7 @@ class _RootScreenState extends State<RootScreen> {
                   backgroundColor: AppColor.themeColor),
             ],
             currentIndex: _currentIndex,
-            selectedItemColor: AppColor.whiteColor,
+            selectedItemColor: AppColor.btnColor,
             unselectedItemColor: Colors.grey,
             unselectedLabelStyle: const TextStyle(color: Colors.grey),
           ),

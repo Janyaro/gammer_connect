@@ -69,31 +69,32 @@ class _LoginScreenState extends State<LoginScreen> {
        ),
        
        SizedBox(height: media.width *.1,),
-      //  const GoogleSignUpBtn(image: 'assets/facebook.png',title: "LogIn with Google",),
-      //  SizedBox(height: media.width *.06,),
        const GoogleSignUpBtn(image: 'assets/google.png',title: "LogIn with Google",),
        SizedBox(height: media.width *.03,),
-       RichText(
-  text: TextSpan(
-    text: "Don't have an Account ? ", // First part
-    style: TextUtils.body16,
-    children: [
-      TextSpan(
-        text: "Sign Up", // Second part
-        recognizer: TapGestureRecognizer()..onTap = (){
-          Navigator.push(
-  context,
-  PageTransition(
-    type: PageTransitionType.fade,
-    child:const SignUpScreen(),
-  ),
-);
-        },
-        style: TextUtils.linktext
-      ),
-    ],
-  ),
-)
+       Align(
+        alignment: Alignment.bottomRight,
+         child: RichText(
+           text: TextSpan(
+             text: "Don't have an Account ? ", // First part
+             style: TextUtils.body16,
+             children: [
+               TextSpan(
+          text: "Sign Up", // Second part
+          recognizer: TapGestureRecognizer()..onTap = (){
+            Navigator.push(
+           context,
+           PageTransition(
+             type: PageTransitionType.fade,
+             child:const SignUpScreen(),
+           ),
+         );
+          },
+          style: TextUtils.linktext
+               ),
+             ],
+           ),
+         ),
+       )
           ],
         ),
       ),

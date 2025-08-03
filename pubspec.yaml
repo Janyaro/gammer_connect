@@ -39,6 +39,7 @@ dependencies:
   page_transition: ^2.1.0
   flutter_carousel_widget: ^3.1.0
   read_more_text: ^0.0.5
+  dotted_border: ^2.1.0
 
 dev_dependencies:
   flutter_test:
